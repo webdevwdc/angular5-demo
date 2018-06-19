@@ -1,0 +1,20 @@
+[
+    {
+        "label": "Period Config",
+        "link": "config1",
+        "isTabShow": false,
+        "index": 0
+    },
+    {
+        "label": "Transaction Config",
+        "link": "config2",
+        "isTabShow": false,
+        "index": 1
+    },
+    {
+        "label": "Territory Config",
+        "link": "config3",
+        "isTabShow": false,
+        "index": 2
+    }
+]

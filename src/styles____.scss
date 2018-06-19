@@ -1,0 +1,382 @@
+    /* You can add global styles to this file, and also import other style files */
+    
+    // Angular Material Css
+    @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+    // @import '~@angular/material/theming';
+    // @include mat-core();
+    // $angular-primary: mat-palette($mat-green, 700);
+    // $angular-accent: mat-palette($mat-green, 500, 900, A100);
+    // $angular-warn: mat-palette($mat-green, 900);
+    // $angular-theme: mat-dark-theme($angular-primary, $angular-accent, $angular-warn);
+    // @include angular-material-theme($angular-theme);
+    // .alternate-theme {
+    //     $alternate-primary: mat-palette($mat-light-blue);
+    //     $alternate-accent: mat-palette($mat-yellow, 400);
+    //     $alternate-theme: mat-light-theme($alternate-primary, $alternate-accent);
+    //     @include angular-material-theme($alternate-theme);
+    // }
+    //font Family
+    @font-face {
+        font-family: 'brandon_grotesque_regularRg';
+        src: url('./assets/fonts/brandon_reg-webfont.eot'), url('./assets/fonts/brandon_reg-webfont.woff2') format('woff2'), url('./assets/fonts/brandon_reg-webfont.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'brandon_grotesquemedium';
+        src: url('./assets/fonts/brandon_med-webfont.eot'), url('./assets/fonts/brandon_med-webfont.woff2') format('woff2'), url('./assets/fonts/brandon_med-webfont.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'brandon_grotesquebold';
+        src: url('./assets/fonts/brandon_bld-webfont.eot'), url('./assets/fonts/brandon_bld-webfont.woff2') format('woff2'), url('./assets/fonts/brandon_bld-webfont.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'brandon_grotesquelight';
+        src: url('./assets/fonts/brandon_light-webfont.eot'), url('./assets/fonts/brandon_light-webfont.woff2') format('woff2'), url('./assets/fonts/brandon_light-webfont.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'KarnivoreSeven';
+        src: url('./assets/fonts/KarnivoreSeven.woff') format('woff'), url('./assets/fonts/KarnivoreSeven.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'brandon_grotesqueblack';
+        src: url('./assets/fonts/brandon_blk-webfont.eot'), url('./assets/fonts/brandon_blk-webfont.woff2') format('woff2'), url('./assets/fonts/brandon_blk-webfont.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    //Fonts Variable
+    $fontlight: 'brandon_grotesquelight';
+    $fontregular:'brandon_grotesque_regularRg';
+    $fontmedium: 'brandon_grotesquemedium';
+    $fontbold:'brandon_grotesquebold';
+    $fontheading:'brandon_grotesqueblack';
+    //Color Variables
+    $white: #fff;
+    $lightblue: #c9c9c9;
+    $blue: #00affa;
+    $aquagreen: #7cfea6;
+    $deepgrey: #333;
+    $black: #000000;
+    $lightgrey:#dedede;
+    //general variable
+    $zero:0;
+    $none:none;
+    $inherit:inherit;
+    $auto:auto;
+    $heading: normal 500 210px/210px 'brandon_grotesqueblack';
+    $subHeading:normal 500 69px/69px 'brandon_grotesque_regularRg';
+    $transition:0.5s all ease-in-out 0s;
+    $full:100%;
+    $fontsize:20px;
+    $translateCenter:translate(-50%,
+    -50%);
+    $translateMiddle:translate(0,
+    -50%);
+    //flex property
+    $flex:flex;
+    @mixin display-flex($flex) {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+    }
+    
+    //general custom style
+    * {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    
+    p {
+        margin: 0 0 20px;
+    }
+    
+    a {
+        outline: 0;
+    }
+    
+    p:empty,
+    h1:empty,
+    h2:empty,
+    h3:empty,
+    h4:empty,
+    h5:empty,
+    h6:empty,
+    {
+        display: none;
+    }
+    
+    button {
+        transition: $transition;
+        -ms-transition: $transition;
+        -webkit-transition: $transition;
+        cursor: pointer;
+        outline: 0;
+        &:hover {
+            background: #888;
+        }
+        &:focus {
+            outline: 0;
+        }
+    }
+    
+    input {
+        outline: 0;
+    }
+    
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    
+    //general custom style
+    * {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+    }
+    
+    body {
+        margin: $zero;
+        padding: $zero;
+        color: $deepgrey;
+        font-family: $fontregular;
+        font-size: $zero+20px;
+        background: #f1f1f1;
+        padding: 100px 0 85px;
+        line-height: 1.4;
+        .header {
+            padding: 20px;
+            background: $blue;
+            color: $white;
+            align-content: stretch;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            h1 {
+                margin: 7px 0 0 0;
+            }
+            .headerLink {
+                margin-left: auto;
+                i {
+                    font-size: $fontsize+30px;
+                    color: $white;
+                }
+            }
+            &.siteHeader {
+                background: $deepgrey;
+            }
+        }
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 98px;
+            bottom: 0;
+            width: 310px;
+            background: $lightgrey;
+            padding: 10px;
+            overflow: auto;
+            .navbar-expand-lg {
+                background: none !important;
+                padding: 0;
+                .navbar-nav {
+                    flex-wrap: wrap;
+                    width: 100%;
+                    border-bottom: 0;
+                    .mat-tab-links {
+                        width: 100%;
+                    }
+                    li {
+                        display: block;
+                        width: 100%;
+                        position: relative;
+                        border-bottom: 1px solid #ccc;
+                        &.show {
+                            .dropdown-toggle {
+                                &:after {
+                                    border-top: 0;
+                                    border-bottom: .3em solid;
+                                }
+                            }
+                        }
+                        a {
+                            color: $deepgrey;
+                            font-size: $fontsize;
+                            color: #333;
+                            font-size: 20px;
+                            padding: .5rem 1rem;
+                            height: auto;
+                            min-width: inherit;
+                            font-weight: 400;
+                            opacity: 1;
+                            display: block;
+                            font-family: $fontregular;
+                            text-align: left;
+                            background-color: none !important;
+                            &:hover {
+                                color: $blue;
+                            }
+                            &.mat-tab-link-active {
+                                color: $blue;
+                            }
+                        }
+                        .arrowToggle {
+                            position: absolute;
+                            border-top: 13px solid $black;
+                            border-left: 8px solid transparent;
+                            border-right: 8px solid transparent;
+                            right: 10px;
+                            top: 14px;
+                            cursor: pointer;
+                        }
+                        &:last-child {
+                            border-bottom: 0;
+                        }
+                        .dropdown-menu {
+                            display: block;
+                            margin: 0 10px 10px 10px;
+                            position: static;
+                            li {
+                                border-bottom: 0;
+                                ul {
+                                    padding: 0;
+                                    li {
+                                        border-bottom: 1px solid #ccc;
+                                        background: #eee;
+                                        a {
+                                            font-size: $fontsize - 3px;
+                                        }
+                                        &:last-child {
+                                            border-bottom: 0;
+                                        }
+                                    }
+                                }
+                            }
+                            .dropdown-menu {
+                                margin: 0 10px 10px 10px;
+                            }
+                        }
+                        .arrowToggle {
+                            &.active {
+                                border-top: 0;
+                                border-bottom: 13px solid $black;
+                            }
+                        }
+                        &:last-child {
+                            border-bottom: 0;
+                        }
+                    }
+                    .active+.dropdown-menu {
+                        // display: block;
+                    }
+                }
+            }
+            &.siteSideBar {
+                background: $lightgrey;
+            }
+            .mat-ink-bar {
+                display: none;
+            }
+            .mat-tab-group.mat-primary .mat-tab-label:not(.mat-tab-disabled):focus,
+            .mat-tab-group.mat-primary .mat-tab-link:not(.mat-tab-disabled):focus,
+            .mat-tab-nav-bar.mat-primary .mat-tab-label:not(.mat-tab-disabled):focus,
+            .mat-tab-nav-bar.mat-primary .mat-tab-link:not(.mat-tab-disabled):focus {
+                background-color: none !important;
+                background: none !important
+            }
+        }
+        .main {
+            margin: 0 0 0 310px;
+            background: $white;
+            height: calc(100vh - 185px);
+            overflow: auto;
+            padding: 10px 30px;
+            p {
+                margin: 0;
+                font-size: 20px;
+                font-family: $fontregular;
+            }
+            .mat-tab-label-content {
+                font-size: 20px;
+                font-family: $fontmedium;
+                color: $black;
+                text-transform: capitalize;
+            }
+            .tabDiv {
+                border: 1px solid $lightgrey;
+                border-top: 0;
+                padding: 15px;
+                height: calc(100vh - 246px);
+            }
+            li {
+                display: inline-flex;
+                white-space: nowrap;
+            }
+            .tabMat {
+                padding: 10px 12px;
+                color: #ccc;
+                background: $lightgrey;
+                display: inline-block;
+                vertical-align: top;
+                border: 0;
+                text-decoration: none !important;
+                border-bottom: 0;
+                margin: 0 3px 0 0;
+                font-family: $fontmedium;
+                text-transform: capitalize;
+                min-height: 48px;
+                //pointer-events: none;
+                &.mat-tab-link-active {
+                    background: $blue;
+                    color: $white;
+                    border: 0;
+                }
+            }
+            .mat-tab-links {
+                position: relative;
+                display: flex;
+                overflow: auto;
+            }
+        }
+        .footer {
+            padding: 20px;
+            background: $deepgrey;
+            color: $white;
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            left: 310px;
+            h1 {
+                margin: 0;
+                font-size: 30px;
+            }
+            &.siteFooter {
+                background: $blue;
+            }
+        }
+        .collapse:not(.show) {
+            display: block;
+        }
+        .navbar-toggler:not(:disabled):not(.disabled) {
+            display: none;
+        }
+    }

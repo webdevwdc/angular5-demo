@@ -1,0 +1,80 @@
+[{
+        "label": "Payee (1)",
+        "icon": null,
+        "hide": true,
+        "link": "",
+        "isTabShow": false,
+        "items": [{
+                "label": "Agent",
+                "icon": "agent",
+                "hide": true,
+                "link": "agent",
+                "isTabShow": false,
+                "items": []
+            },
+            {
+                "label": "Payee Hierarchy",
+                "icon": "payee hierarchy",
+                "hide": true,
+                "link": "payee",
+                "isTabShow": false,
+                "items": []
+            }
+        ]
+    },
+    {
+        "label": "Transaction (2)",
+        "icon": null,
+        "hide": true,
+        "link": "",
+        "isTabShow": false,
+        "items": [{
+                "label": "transaction 1",
+                "icon": "transaction 1",
+                "hide": true,
+                "link": "transaction1",
+                "isTabShow": false,
+                "items": [{
+                        "label": "sub-trans 1",
+                        "icon": "sub-trans 1",
+                        "hide": true,
+                        "link": "subtrans1",
+                        "isTabShow": false,
+                        "items": []
+                    },
+                    {
+                        "label": "sub-trans 2",
+                        "icon": "sub-trans 2",
+                        "hide": true,
+                        "link": "subtrans2",
+                        "isTabShow": false,
+                        "items": []
+                    }
+                ]
+            },
+            {
+                "label": "transaction 2",
+                "icon": "transaction 2",
+                "hide": true,
+                "link": "transaction2",
+                "isTabShow": false,
+                "items": [{
+                    "label": "sub-trans 3",
+                    "icon": "sub-trans 3",
+                    "hide": true,
+                    "link": "subtrans3",
+                    "isTabShow": false,
+                    "items": []
+                }]
+            }
+        ]
+    },
+    {
+        "label": "Reference (3)",
+        "icon": "reference",
+        "hide": true,
+        "link": "reference",
+        "isTabShow": false,
+        "items": []
+    }
+]

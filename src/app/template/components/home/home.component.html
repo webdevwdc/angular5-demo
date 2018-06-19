@@ -1,0 +1,36 @@
+<app-header></app-header>
+
+
+<app-sidebar [sidemainmenus]="list"></app-sidebar>
+
+<main class="main">
+
+    <ul mat-tab-nav-bar class="mat-tab-nav-bar">
+        <ng-template #recursiveList let-list>
+            <li *ngFor="let item of list" id={{item.link}}>
+
+                <span>
+                    <a *ngIf="item.icon!=null && item.isTabShow" md-tab-link [routerLink]="item.link" routerLinkActive="mat-tab-link-active"
+                        #rla="routerLinkActive" (click)="activeLinkIndex = i" [routerLinkActiveOptions]="{exact: true}" class="tabMat">
+                        {{item.icon}}
+
+                    </a>
+                    <a class="closeBTn" *ngIf="item.icon!=null && item.isTabShow" (click)="closeTab(item)">X</a>
+                </span>
+
+
+
+                <ng-container *ngTemplateOutlet="recursiveList; context:{ $implicit: item.items }"></ng-container>
+
+            </li>
+        </ng-template>
+        <ng-container *ngTemplateOutlet="recursiveList; context:{ $implicit: list }"></ng-container>
+    </ul>
+
+    <div class="tabDiv">
+        <router-outlet></router-outlet>
+    </div>
+</main>
+
+
+<app-footer></app-footer>
